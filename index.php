@@ -6,57 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home-Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"  />
+    <?php include ('includes/style.php') ?>
 </head>
-<body>
+<body >
 
     <div class="container-fluid p-0">
-        <div class="row fixed-top  border-bottom bg-light">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="row ">
-                    <div class="col-lg-3">
-                        <img src="img/logo.png" class="w-75">
-                    </div>
-                    <div class="col-lg-6 m-auto" >
-                        <ul class="nav justify-content-center fs-6">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">Gallery</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">Contact Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">Sign-In</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" href="#">Login-In</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <img src="img/logo.png" class="w-75">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php include ('includes/navbar.php');?>
         <div class="row">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="1000">
                         <img src="img/1920x800/img1.jpg" class="d-block w-10000" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="20000">
-                        <img src="img/1920x800/img2.jpg" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -258,6 +218,7 @@
                 </div>
             </div>
         </div>
+        <?php include ('includes/footer.php')?>
     </div>
 
 </body>
