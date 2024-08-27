@@ -72,7 +72,7 @@
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
             <div class="row">
-                
+
                 <div class="col-lg-3">
                     <div class="card mb-3" style="max-width: 18rem;">
                         <img src="img/235x240/img1.jpg" class="card-img-top" alt="...">
