@@ -2,7 +2,7 @@
     <div class="col-lg-8 offset-lg-2">
         <div class="row ">
             <div class="col-lg-3">
-                <img src="img/logo.png" class="w-75">
+                <img src="img/logo.png" class="w-75 w-md-25">
             </div>
             <div class="col-lg-6 m-auto" >
                 <ul class="nav justify-content-center fs-6">
@@ -13,10 +13,10 @@
                         <a class="nav-link text-dark" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Gallery</a>
+                        <a class="nav-link text-dark" href="products.php">Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Contact Us</a>
+                        <a class="nav-link text-dark" href="contact-us.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="#">Sign-In</a>

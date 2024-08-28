@@ -38,7 +38,7 @@
                 </div>
                 <div class="row py-2">
                     <div class="text-end py-2 px-0">
-                        <a href="" class="btn btn-sm btn-light">View More</a>
+                        <a href="products.php" class="btn btn-sm btn-light">View More</a>
                     </div>
                     <div class="col-lg-3">
                         <div class="card" style="width: 18rem;">
@@ -133,7 +133,7 @@
                 <div class="row py-2">
 
                     <div class="text-end py-2 px-0">
-                        <a href="" class="btn btn-sm btn-light">View More</a>
+                        <a href="products.php" class="btn btn-sm btn-light">View More</a>
                     </div>
                     <div class="col-lg-3">
                         <div class="card" style="width: 18rem;">

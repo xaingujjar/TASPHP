@@ -12,96 +12,51 @@
 
 <div class="container-fluid p-0">
     <?php include ('includes/navbar.php');?>
+    <div class="row " style="background-image: url('img/1920x500/img6.jpg'); background-repeat: no-repeat; background-position: center; padding: 100px 0px">
+        <div class="d-flex py-2 justify-content-center">
+           <div class="text-center text-light">
+               <h1>About us</h1>
+               <p >The method supports negative indices to count backwards from the end of the array or string.</p>
+           </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
+        
             <div class="row py-5">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-6">
                     <h3>About Products</h3>
+                    <p style="text-align: justify">
+                        Discover how LedgerMaster can transform your accounting process. Join the growing number of businesses that trust LedgerMaster to handle their double entry bookkeeping with precision and ease. Experience the difference today, and let us help you master your ledgers.
+                        Exceptional Customer Support: At LedgerMaster, we are committed to your success. Our dedicated customer support team is always available to assist you with any questions or issues you may encounter, ensuring that you get the most out of our software.
+                    </p>
+                    <h3>Our Social Links</h3>
+                    <ul class="list-unstyled d-flex justify-content-evenly">
+                        <li >
+                            <a class="link-dark fs-2" style="text-decoration: none" href="">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="link-dark fs-2" style="text-decoration: none" href="">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </li>
+                        <li >
+                            <a class="link-dark fs-2" style="text-decoration: none" href="">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="link-dark fs-2" style="text-decoration: none" href="">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="img/playstore.png" class="w-75">
                 </div>
-            </div>
-            <div class="row py-2">
-                <div class="text-end py-2 px-0">
-                    <a href="" class="btn btn-sm btn-light">View More</a>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/300x230/img3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <ul class="d-flex list-unstyled text-warning">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star-half-stroke"></i></li>
-                            </ul>
-                            <div class="d-flex justify-content-between">
-                                <b>PKR 2599/-</b>
-                                <button class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/300x230/img2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <ul class="d-flex list-unstyled text-warning">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star-half-stroke"></i></li>
-                            </ul>
-                            <div class="d-flex justify-content-between">
-                                <b>PKR 2599/-</b>
-                                <button class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/300x230/img4.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <ul class="d-flex list-unstyled text-warning">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star-half-stroke"></i></li>
-                            </ul>
-                            <div class="d-flex justify-content-between">
-                                <b>PKR 2599/-</b>
-                                <button class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/300x230/img5.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <ul class="d-flex list-unstyled text-warning">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star-half-stroke"></i></li>
-                            </ul>
-                            <div class="d-flex justify-content-between">
-                                <b>PKR 2599/-</b>
-                                <button class="btn btn-sm btn-dark"><i class="fa-solid fa-cart-shopping"></i></button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-6">
+                    <img src="img/410x300/img1.jpg">
                 </div>
             </div>
         </div>
