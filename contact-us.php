@@ -1,3 +1,22 @@
+<?php
+
+    $output = '';
+    if(isset($_POST['get_comment'])){
+        $f_name = $_POST['f_name'];
+        $l_name = $_POST['l_name'];
+        $email = $_POST['email'];
+        $comment = $_POST['comment'];
+        $city = $_POST['city'];
+        $state = $_POST['state'];
+        $output = "Your name is <b>". $f_name . " " . $l_name . "</b>, email <b>" . $email . "</b>, city <b>" . $city . "</b>, state <b>" . $state . "</b> and comment <b>" . $comment . "</b><br>";
+    }
+
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,48 +52,43 @@
                     <p style="text-align: justify">
                         Discover how LedgerMaster can transform your accounting process. Join the growing number of businesses that trust LedgerMaster to handle their double entry bookkeeping with precision and ease. Experience the difference today, and let us help you master your ledgers.
                     </p>
-                    <form class="row g-3">
+                    <p>
+                        <?php echo $output;?>
+                    </p>
+                    <form method="post" class="row g-3">
                         <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">First Name</label>
+                            <input type="text" class="form-control" name="f_name" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail4" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" name="l_name" id="inputEmail4">
+                        </div>
+                        <div class="col-md-12">
                             <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="inputPassword4">
-                        </div>
-                        <div class="col-12">
-                            <label for="inputAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                        </div>
-                        <div class="col-12">
-                            <label for="inputAddress2" class="form-label">Address 2</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                            <input type="email" class="form-control" name="email" id="inputEmail4">
                         </div>
                         <div class="col-md-6">
                             <label for="inputCity" class="form-label">City</label>
-                            <input type="text" class="form-control" id="inputCity">
+                            <input type="text" class="form-control" name="city" id="inputCity">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <label for="inputState" class="form-label">State</label>
-                            <select id="inputState" class="form-select">
+                            <select id="inputState" name="state" class="form-select">
                                 <option selected>Choose...</option>
-                                <option>...</option>
+                                <option>Punjab</option>
+                                <option>Sindh</option>
+                                <option>KPK</option>
+                                <option>Kashmir</option>
                             </select>
                         </div>
-                        <div class="col-md-2">
-                            <label for="inputZip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="inputZip">
+                        <div class="col-md-12">
+                            <label for="inputState" class="form-label">Comments</label>
+                            <textarea name="comment" class="form-control"></textarea>
                         </div>
+
                         <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Sign in</button>
+                            <button type="submit" name="get_comment" class="btn btn-primary">Save</button>
                         </div>
                     </form>
                 </div>
