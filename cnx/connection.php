@@ -3,8 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "tas_std";
-
-
+// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
@@ -12,4 +11,3 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 //    die("Connection failed: " . $conn->connect_error);
 //}
 //echo "Connected successfully";
-//die();

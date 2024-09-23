@@ -1,5 +1,5 @@
 <?php
-    include ('helper.php');
+    include ('cnx/connection.php');
 
     $info = '';
     if(isset($_POST['signup'])){
@@ -16,9 +16,9 @@
         $state = $_POST['state'];
         $status = 2;
 
-        $inset_query = "INSERT INTO `users`(`f_name`, `l_name`, `email`, `phone`, `password`, `gender`, `dob`, `city`, `state`, `religion`, `status`) VALUES
-                          ('{$f_name}','{$l_name}','{$email}','{$phone}','{$password}','{$gender}','{$dob}','{$city}','{$state}','{$religion}','$status')";
-        $inset_query = mysqli_query($conn,$inset_query);
+        $insert_query = "INSERT INTO `users`(`f_name`, `l_name`, `email`, `phone`, `password`, `gender`, `dob`, `city`, `state`,  `religion`, `status`) VALUES
+                         ('{$f_name}','{$l_name}','{$email}','{$phone}','{$password}','{$gender}','{$dob}','{$city}','{$state}','{$religion}','$status')";
+        $inset_query = mysqli_query($conn,$insert_query);
         if($inset_query){
             $info = '<div class="alert alert-success" role="alert">
                       Successfully Registered
@@ -34,11 +34,7 @@
 //        die();
       }
 
-
 ?>
-
-
-
 
 <!doctype html>
 <html lang="en">
