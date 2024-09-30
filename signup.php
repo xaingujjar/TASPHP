@@ -16,18 +16,41 @@
         $state = $_POST['state'];
         $status = 2;
 
-        $insert_query = "INSERT INTO `users`(`f_name`, `l_name`, `email`, `phone`, `password`, `gender`, `dob`, `city`, `state`,  `religion`, `status`) VALUES
-                         ('{$f_name}','{$l_name}','{$email}','{$phone}','{$password}','{$gender}','{$dob}','{$city}','{$state}','{$religion}','$status')";
-        $inset_query = mysqli_query($conn,$insert_query);
-        if($inset_query){
-            $info = '<div class="alert alert-success" role="alert">
-                      Successfully Registered
+
+
+        if($password != $re_password){
+            $info = '<div class="alert alert-danger" role="alert">
+                     Your passwords did not match!
                     </div>';
         }else{
-            $info = '<div class="alert alert-danger" role="alert">
+            $fetch_query = "SELECT * FROM `users` where email = '{$email}'";
+            $fetch_query = mysqli_query($conn, $fetch_query);
+            $fetch_data = mysqli_fetch_all($fetch_query);
+            $record = count($fetch_data);
+            if($record > 0){
+                $info = '<div class="alert alert-danger" role="alert">
+                     Sorry this email is already registered!
+                    </div>';
+            }else{
+                $insert_query = "INSERT INTO `users`(`f_name`, `l_name`, `email`, `phone`, `password`, `gender`, `dob`, `city`, `state`,  `religion`, `status`) VALUES
+                         ('{$f_name}','{$l_name}','{$email}','{$phone}','{$password}','{$gender}','{$dob}','{$city}','{$state}','{$religion}','$status')";
+                $inset_query = mysqli_query($conn,$insert_query);
+                if($inset_query){
+                    $info = '<div class="alert alert-success" role="alert">
+                      Successfully Registered
+                    </div>';
+                }else{
+                    $info = '<div class="alert alert-danger" role="alert">
                       Something Went Wrong
                     </div>';
+                }
+            }
+
         }
+
+
+
+
 
 //        echo '<pre>';
 //        print_r($_POST);
@@ -71,15 +94,15 @@
                     <form method="post" class="row g-3">
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">First Name</label>
-                            <input type="text" class="form-control" name="f_name" id="inputEmail4">
+                            <input type="text" class="form-control" name="f_name" id="inputEmail4" required>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" name="l_name" id="inputEmail4">
+                            <input type="text" class="form-control" name="l_name" id="inputEmail4" required>
                         </div>
                         <div class="col-md-12">
                             <label for="inputEmail4" class="form-label">Email</label>
-                            <input type="email" class="form-control" name="email" id="inputEmail4">
+                            <input type="email" class="form-control" name="email" id="inputEmail4" required>
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Password</label>
