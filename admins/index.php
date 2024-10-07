@@ -4,9 +4,24 @@ if(!isset($_SESSION['login_session'])){
     header("location: ../login.php");
 }
 
-//    $select_data = "SELECT id, f_name, l_name FROM `users`";
-//    $select_data = "SELECT * FROM `users` where gender = '1' ";
-//    $select_data = "SELECT id, f_name, l_name FROM `users` where gender = '1' ";
+$info = '';
+if(isset($_GET['del_id'])){
+    $del_id = $_GET['del_id'];
+    $del_query = "DELETE FROM users WHERE id = $del_id";
+    $del_query = mysqli_query($conn, $del_query);
+    if($del_query){
+        $info = '<div class="alert alert-success" role="alert">
+                      Successfully Deleted
+                    </div>';
+    }else{
+        $info = '<div class="alert alert-danger" role="alert">
+                      Something Went Wrong
+                    </div>';
+    }
+
+}
+
+
 $select_data = "SELECT * FROM `users`  ";
 $select_data = mysqli_query($conn, $select_data);
 $data_fetch = mysqli_fetch_assoc($select_data);
@@ -35,7 +50,17 @@ $data_fetch = mysqli_fetch_assoc($select_data);
 
 <div class="container">
     <div class="row">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">XYZ Company</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="logout.php" class="btn btn-outline-success" >Logout</a>
+            </div>
+        </nav>
         <h1>All Users</h1>
+        <?=$info?>
         <table class="table table-hover">
             <thead>
             <tr>
@@ -64,7 +89,10 @@ $data_fetch = mysqli_fetch_assoc($select_data);
                     <td><?=$data_fetch['religion']?></td>
                     <td><?=$data_fetch['city']?></td>
                     <td><?=$data_fetch['status']?></td>
-                    <td></td>
+                    <td>
+                        <a href="" class="btn btn-info btn-sm text-light">Edit</a>
+                            <a href="index.php?del_id=<?=$data_fetch['id']?>" class="btn btn-danger btn-sm text-light">Delete</a>
+                    </td>
                 </tr>
 
             <?php }while($data_fetch = mysqli_fetch_assoc($select_data)); ?>
